@@ -25,7 +25,7 @@ const db = getFirestore(app);
 // -------------------------
 //
 
-const SUBCOLECCIONES = ["TITULO", "Info-Box", "PRODUCTOS"];
+const SUBCOLECCIONES = ["TITULO", "Info-Box", "PRODUCTOS", "Marcas"];
 
 async function cargarSubcoleccion(nombreSubcoleccion) {
   const colRef = collection(db, "Home", "TEXTOS", nombreSubcoleccion);
