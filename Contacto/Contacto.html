@@ -11,11 +11,11 @@
     <div class="container">
         <header class="header-contacto">
             <div class="top-mail-container">
-                <svg class="svg-mail-header" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <img id="img-mail-header" src="" alt="Mail Header" class="svg-mail-header">
             </div>
             <div class="title-with-ball">
                 <h1 id="db-titulo-principal">¡Contacta con Nosotros!</h1>
-                <span id="db-emoji-header" class="pelota-header">⚾</span>
+                <img id="img-pelota" src="" alt="Pelota" class="pelota-header">
             </div>
             <p id="db-descripcion-principal">Estamos aquí para ayudarte. Envíanos tu mensaje y nuestro equipo te responderá en menos de 24 horas.</p>
         </header>
@@ -36,7 +36,7 @@
                     <div id="formMessage" style="margin: 10px 0; padding: 10px; border-radius: 4px; display: none;"></div>
                     
                     <button id="db-btn-enviar" type="submit" class="btn-enviar">
-                        <svg class="svg-btn" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                        <img id="img-btn-enviar" src="" alt="Enviar" class="svg-btn">
                         <span id="db-btn-text">Enviar Mensaje</span>
                     </button>
                 </form>
@@ -44,7 +44,7 @@
 
             <aside class="info-sidebar">
                 <div class="info-card bg-blue">
-                    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <img id="img-lugar" src="" alt="Lugar" class="icon-svg icon-style">
                     <div class="info-text">
                         <h3 id="title-direccion">Dirección</h3>
                         <p id="info-direccion">C. Maiz, 11,Usera, 28026 Madrid</p>
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="info-card bg-red">
-                    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <img id="img-tel" src="" alt="Teléfono" class="icon-svg icon-style">
                     <div class="info-text">
                         <h3 id="title-tel">Teléfono</h3>
                         <p id="info-tel">+34 613 98 49 65</p>
@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="info-card bg-green">
-                    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <img id="img-email-card" src="" alt="Email" class="icon-svg icon-style">
                     <div class="info-text">
                         <h3 id="title-email">Email</h3>
                         <p id="info-email">info@grandslammarket.com</p>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="info-card bg-purple">
-                    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    <img id="img-horario" src="" alt="Horario" class="icon-svg icon-style">
                     <div class="info-text">
                         <h3 id="title-horario">Horario</h3>
                         <p id="info-horario">Lunes-Viernes 8:00-21:00</p>
@@ -85,7 +85,7 @@
         <section class="faq-container-general">
             <div class="faq-header-inline">
                 <h2 id="db-faq-title" class="faq-main-title">Preguntas Frecuentes</h2>
-                <span id="db-emoji-faq" class="pelota-faq">⚾</span>
+                <img id="img-pelota-faq" src="" alt="Pelota FAQ" class="pelota-faq">
             </div>
             <div class="faq-grid">
                 <div class="faq-item-white">
@@ -111,7 +111,7 @@
 <script type="module">
     // Firebase v9 Modular SDK - Dynamic Content Loading
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    import { getFirestore, doc, getDoc, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+    import { getFirestore, doc, getDoc, collection, addDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
     import { firebaseConfig } from "../firebase-config.js";
 
     console.log("Intentando conectar a Firebase...");
@@ -148,177 +148,397 @@
         }, 10000);
     }
 
-    async function cargarDatosDesdeFirebase() {
-        try {
-            console.log('Cargando datos dinámicos desde Firestore...');
-            
-            // Traer textos de contacto
-            const textosRef = doc(db, "Contact", "contact_texts");
-            const textosSnap = await getDoc(textosRef);
-
+    function cargarDatosDesdeFirebase() {
+        console.log('Configurando listeners dobles...');
+        
+        // === LISTENER 1: TEXTOS desde Contact/contact_texts ===
+        const textosRef = doc(db, "Contact", "contact_texts");
+        onSnapshot(textosRef, (textosSnap) => {
             if (textosSnap.exists()) {
-                const doc = textosSnap;
-                console.log('Documento contact_texts encontrado');
+                const data = textosSnap.data();
+                console.log('Documento Contact/contact_texts encontrado (textos)');
+                console.log("Campos de textos recibidos:", data);
+                console.log('=== TODOS LOS CAMPOS DISPONIBLES EN TEXTOS ===');
+                console.log('Nombres de campos:', Object.keys(data));
+                console.log('¿Existen campos title_*?', {
+                    title_direccion: !!data.title_direccion,
+                    title_tel: !!data.title_tel,
+                    title_email: !!data.title_email,
+                    title_horario: !!data.title_horario
+                });
                 
-                // Actualizar título principal
-                if (doc.data().titulo_principal && document.getElementById('db-titulo-principal')) {
-                    document.getElementById('db-titulo-principal').textContent = doc.data().titulo_principal;
-                    console.log('Título principal actualizado:', doc.data().titulo_principal);
+                // === ACTUALIZAR TEXTOS ===
+                
+                // Título principal
+                if (data.titulo_principal && document.getElementById('db-titulo-principal')) {
+                    document.getElementById('db-titulo-principal').textContent = data.titulo_principal;
+                    console.log('Título principal actualizado');
+                } else {
+                    console.log("Falla el campo: titulo_principal");
                 }
                 
-                // Actualizar descripción principal
-                if (doc.data().desc_principal && document.getElementById('db-descripcion-principal')) {
-                    document.getElementById('db-descripcion-principal').textContent = doc.data().desc_principal;
-                    console.log('Descripción principal actualizada:', doc.data().desc_principal);
+                // Descripción principal
+                if (data.desc_principal && document.getElementById('db-descripcion-principal')) {
+                    document.getElementById('db-descripcion-principal').textContent = data.desc_principal;
+                    console.log('Descripción principal actualizada');
+                } else {
+                    console.log("Falla el campo: desc_principal");
                 }
                 
-                // Actualizar título del formulario
-                if (doc.data().form_title && document.getElementById('db-form-title')) {
-                    document.getElementById('db-form-title').textContent = doc.data().form_title;
-                    console.log('Título del formulario actualizado:', doc.data().form_title);
+                // Título del formulario
+                if (data.from_title && document.getElementById('db-form-title')) {
+                    document.getElementById('db-form-title').textContent = data.from_title;
+                    console.log('Título del formulario actualizado');
+                } else {
+                    console.log("Falla el campo: from_title");
                 }
                 
-                // Actualizar título de FAQs
-                if (doc.data().faq_title && document.getElementById('db-faq-title')) {
-                    document.getElementById('db-faq-title').textContent = doc.data().faq_title;
-                    console.log('Título de FAQs actualizado:', doc.data().faq_title);
+                // Título de FAQs
+                if (data.faq_title && document.getElementById('db-faq-title')) {
+                    document.getElementById('db-faq-title').textContent = data.faq_title;
+                    console.log('Título de FAQs actualizado');
+                } else {
+                    console.log("Falla el campo: faq_title");
                 }
                 
-                // Actualizar labels del formulario
-                if (doc.data().lbl_name && document.getElementById('lbl-name')) {
-                    document.getElementById('lbl-name').textContent = doc.data().lbl_name;
-                    console.log('Label nombre actualizado:', doc.data().lbl_name);
+                // Labels del formulario
+                if (data.lbl_name && document.getElementById('lbl-name')) {
+                    document.getElementById('lbl-name').textContent = data.lbl_name;
+                } else {
+                    console.log("Falla el campo: lbl_name");
                 }
                 
-                if (doc.data().lbl_email && document.getElementById('lbl-email')) {
-                    document.getElementById('lbl-email').textContent = doc.data().lbl_email;
-                    console.log('Label email actualizado:', doc.data().lbl_email);
+                if (data.lbl_email && document.getElementById('lbl-email')) {
+                    document.getElementById('lbl-email').textContent = data.lbl_email;
+                } else {
+                    console.log("Falla el campo: lbl_email");
                 }
                 
-                if (doc.data().lbl_phone && document.getElementById('lbl-phone')) {
-                    document.getElementById('lbl-phone').textContent = doc.data().lbl_phone;
-                    console.log('Label teléfono actualizado:', doc.data().lbl_phone);
+                if (data.lbl_phone && document.getElementById('lbl-phone')) {
+                    document.getElementById('lbl-phone').textContent = data.lbl_phone;
+                } else {
+                    console.log("Falla el campo: lbl_phone");
                 }
                 
-                if (doc.data().lbl_message && document.getElementById('lbl-message')) {
-                    document.getElementById('lbl-message').textContent = doc.data().lbl_message;
-                    console.log('Label mensaje actualizado:', doc.data().lbl_message);
+                if (data.lbl_message && document.getElementById('lbl-message')) {
+                    document.getElementById('lbl-message').textContent = data.lbl_message;
+                } else {
+                    console.log("Falla el campo: lbl_message");
                 }
                 
-                // Actualizar emojis
-                if (doc.data().emoji_header && document.getElementById('db-emoji-header')) {
-                    document.getElementById('db-emoji-header').textContent = doc.data().emoji_header;
-                    console.log('Emoji header actualizado:', doc.data().emoji_header);
+                // Texto del botón
+                if (data.btn_enviar && document.getElementById('db-btn-text')) {
+                    document.getElementById('db-btn-text').textContent = data.btn_enviar;
+                } else {
+                    console.log("Falla el campo: btn_enviar");
                 }
                 
-                if (doc.data().emoji_faq && document.getElementById('db-emoji-faq')) {
-                    document.getElementById('db-emoji-faq').textContent = doc.data().emoji_faq;
-                    console.log('Emoji FAQ actualizado:', doc.data().emoji_faq);
+                // Placeholders
+                if (data.placeholder_name && document.getElementById('input-name')) {
+                    document.getElementById('input-name').placeholder = data.placeholder_name;
+                } else {
+                    console.log("Falla el campo: placeholder_name");
                 }
                 
-                // Actualizar texto del botón (con fallback)
-                if (document.getElementById('db-btn-text')) {
-                    if (doc.data().btn_enviar && doc.data().btn_enviar.trim() !== '') {
-                        document.getElementById('db-btn-text').textContent = doc.data().btn_enviar;
-                        console.log('Botón enviar actualizado:', doc.data().btn_enviar);
-                    }
-                    // Si no hay valor en Firebase, mantiene el texto del HTML
-                    else {
-                        console.log('Botón enviar mantiene valor por defecto del HTML');
-                    }
+                if (data.placeholder_email && document.getElementById('input-email')) {
+                    document.getElementById('input-email').placeholder = data.placeholder_email;
+                } else {
+                    console.log("Falla el campo: placeholder_email");
                 }
                 
-                // Actualizar placeholders de inputs
-                if (doc.data().placeholder_name && document.getElementById('input-name')) {
-                    document.getElementById('input-name').placeholder = doc.data().placeholder_name;
-                    console.log('Placeholder nombre actualizado:', doc.data().placeholder_name);
+                if (data.placeholder_phone && document.getElementById('input-phone')) {
+                    document.getElementById('input-phone').placeholder = data.placeholder_phone;
+                } else {
+                    console.log("Falla el campo: placeholder_phone");
                 }
                 
-                if (doc.data().placeholder_email && document.getElementById('input-email')) {
-                    document.getElementById('input-email').placeholder = doc.data().placeholder_email;
-                    console.log('Placeholder email actualizado:', doc.data().placeholder_email);
+                if (data.placeholder_message && document.getElementById('input-message')) {
+                    document.getElementById('input-message').placeholder = data.placeholder_message;
+                } else {
+                    console.log("Falla el campo: placeholder_message");
                 }
                 
-                if (doc.data().placeholder_phone && document.getElementById('input-phone')) {
-                    document.getElementById('input-phone').placeholder = doc.data().placeholder_phone;
-                    console.log('Placeholder teléfono actualizado:', doc.data().placeholder_phone);
+                // Títulos de tarjetas - usar textos fijos ya que no existen en Firestore
+                // Los títulos se mantienen del HTML original
+                
+                // Datos de contacto
+                if (data.direccion && document.getElementById('info-direccion')) {
+                    document.getElementById('info-direccion').textContent = data.direccion;
+                } else {
+                    console.log("Falla el campo: direccion");
                 }
                 
-                if (doc.data().placeholder_message && document.getElementById('input-message')) {
-                    document.getElementById('input-message').placeholder = doc.data().placeholder_message;
-                    console.log('Placeholder mensaje actualizado:', doc.data().placeholder_message);
+                if (data.email_contacto && document.getElementById('info-email')) {
+                    document.getElementById('info-email').textContent = data.email_contacto;
+                } else {
+                    console.log("Falla el campo: email_contacto");
                 }
                 
-                // Actualizar títulos de las tarjetas de información
-                if (doc.data().title_direccion && document.getElementById('title-direccion')) {
-                    document.getElementById('title-direccion').textContent = doc.data().title_direccion;
-                    console.log('Título dirección actualizado:', doc.data().title_direccion);
+                if (data.tel_contacto && document.getElementById('info-tel')) {
+                    document.getElementById('info-tel').textContent = data.tel_contacto;
+                } else {
+                    console.log("Falla el campo: tel_contacto");
                 }
                 
-                if (doc.data().title_tel && document.getElementById('title-tel')) {
-                    document.getElementById('title-tel').textContent = doc.data().title_tel;
-                    console.log('Título teléfono actualizado:', doc.data().title_tel);
+                if (data.horario_tienda && document.getElementById('info-horario')) {
+                    document.getElementById('info-horario').textContent = data.horario_tienda;
+                } else {
+                    console.log("Falla el campo: horario_tienda");
                 }
                 
-                if (doc.data().title_email && document.getElementById('title-email')) {
-                    document.getElementById('title-email').textContent = doc.data().title_email;
-                    console.log('Título email actualizado:', doc.data().title_email);
+                if (data.ubicacion_mapa && document.getElementById('db-map')) {
+                    document.getElementById('db-map').src = data.ubicacion_mapa;
+                } else {
+                    console.log("Falla el campo: ubicacion_mapa");
                 }
                 
-                if (doc.data().title_horario && document.getElementById('title-horario')) {
-                    document.getElementById('title-horario').textContent = doc.data().title_horario;
-                    console.log('Título horario actualizado:', doc.data().title_horario);
-                }
+                console.log('Textos procesados desde Contact/contact_texts');
                 
-                // Actualizar dirección
-                if (doc.data().direccion && document.getElementById('info-direccion')) {
-                    document.getElementById('info-direccion').textContent = doc.data().direccion;
-                    console.log('Dirección actualizada:', doc.data().direccion);
-                }
-                
-                // Actualizar email
-                if (doc.data().email_contacto && document.getElementById('info-email')) {
-                    document.getElementById('info-email').textContent = doc.data().email_contacto;
-                    console.log('Email actualizado:', doc.data().email_contacto);
-                }
-                
-                // Actualizar teléfono
-                if (doc.data().tel_contacto && document.getElementById('info-tel')) {
-                    document.getElementById('info-tel').textContent = doc.data().tel_contacto;
-                    console.log('Teléfono actualizado:', doc.data().tel_contacto);
-                }
-                
-                // Actualizar horario
-                if (doc.data().horario_tienda && document.getElementById('info-horario')) {
-                    document.getElementById('info-horario').textContent = doc.data().horario_tienda;
-                    console.log('Horario actualizado:', doc.data().horario_tienda);
-                }
-                
-                // Actualizar mapa
-                if (doc.data().ubicacion_mapa && document.getElementById('db-map')) {
-                    document.getElementById('db-map').src = doc.data().ubicacion_mapa;
-                    console.log('Mapa actualizado');
-                }
-                
-                // Mensaje de confirmación
-                console.log("DATOS CARGADOS: " + doc.data().direccion);
-                console.log('Todos los textos de contacto actualizados correctamente');
             } else {
                 const errorMsg = 'No se encontró el documento "contact_texts" en la colección "Contact"';
                 console.error('ERROR:', errorMsg);
-                console.error('Verifica que:');
-                console.error('1. La colección "Contact" exista en Firestore');
-                console.error('2. El documento "contact_texts" exista');
-                console.error('3. Las reglas de seguridad permitan la lectura');
                 mostrarErrorEnPantalla(errorMsg);
             }
-            
-        } catch (error) {
-            console.error('Error al cargar datos desde Firebase:', error);
-            console.error('Error completo:', error.message);
-            console.error('Código de error:', error.code);
-            mostrarErrorEnPantalla(`Error de Firebase: ${error.message} (Código: ${error.code})`);
+        }, (error) => {
+            console.error('Error en listener de Contact/contact_texts:', error);
+            if (error.code === 'permission-denied') {
+                mostrarErrorEnPantalla('Permission denied: No tienes permisos para leer la colección Contact');
+            } else if (error.code === 'not-found') {
+                mostrarErrorEnPantalla('Collection not found: La colección Contact no existe');
+            }
+        });
+
+        // === LISTENER 2: ICONOS Y FONDOS desde Contact/Imágenes ===
+        console.log('Intentando acceder a Contact/Imágenes...');
+        
+        // Función para intentar con ambos nombres (con y sin tilde)
+        function cargarImagenes(nombreDocumento) {
+            const imagenesRef = doc(db, "Contact", nombreDocumento);
+            onSnapshot(imagenesRef, (imagenesSnap) => {
+                if (imagenesSnap.exists()) {
+                    const data = imagenesSnap.data();
+                    console.log(`Documento Contact/${nombreDocumento} encontrado (iconos y fondos)`);
+                    
+                    // Método para buscar campos ignorando espacios
+                    const getField = (name) => {
+                        return data[name] || 
+                               data[name.trim()] || 
+                               data[Object.keys(data).find(k => k.includes(name))] ||
+                               data[Object.keys(data).find(k => k.toLowerCase().includes(name.toLowerCase()))];
+                    };
+
+                    console.log("Campos de imágenes recibidos:", data);
+                    console.log('=== TODOS LOS CAMPOS DISPONIBLES EN IMÁGENES ===');
+                    console.log('Nombres de campos:', Object.keys(data));
+                    console.log('CAMPOS REALES:', Object.keys(data));
+                    console.log('Valores de campos problemáticos:', {
+                        'url_icono_tel': data.url_icono_tel,
+                        'url_icono_horario': data.url_icono_horario,
+                        'url_icono_enviar': data.url_icono_enviar,
+                        'url_btn_enviar': data.url_btn_enviar
+                    });
+                    
+                    console.log('Campos de iconos específicos:', {
+                        url_icono_lugar: !!data.url_icono_lugar,
+                        url_icono_tel: !!data.url_icono_tel,
+                        url_icono_email: !!data.url_icono_email,
+                        url_icono_horario: !!data.url_icono_horario,
+                        url_icono_enviar: !!data.url_icono_enviar,
+                        url_icono_pelota: !!data.url_icono_pelota
+                    });
+                    
+                    // Buscar posibles nombres alternativos para los campos que faltan
+                    console.log('Posibles nombres alternativos para teléfono:', 
+                        Object.keys(data).filter(key => key.toLowerCase().includes('tel')));
+                    console.log('Posibles nombres alternativos para horario:', 
+                        Object.keys(data).filter(key => key.toLowerCase().includes('horario')));
+                    console.log('Posibles nombres alternativos para enviar:', 
+                        Object.keys(data).filter(key => key.toLowerCase().includes('enviar')));
+                
+                // === ACTUALIZAR FONDOS ===
+                
+                // Fondo azul
+                if (data.url_fondo_azul && document.querySelector('.bg-blue')) {
+                    document.querySelector('.bg-blue').style.backgroundImage = `url(${data.url_fondo_azul})`;
+                    document.querySelector('.bg-blue').style.backgroundSize = 'cover';
+                    document.querySelector('.bg-blue').style.backgroundPosition = 'center';
+                    document.querySelector('.bg-blue').style.backgroundRepeat = 'no-repeat';
+                    console.log('Fondo azul aplicado');
+                } else {
+                    console.log("Falla el campo: url_fondo_azul");
+                }
+                
+                // Fondo rojo
+                if (data.url_fondo_rojo && document.querySelector('.bg-red')) {
+                    document.querySelector('.bg-red').style.backgroundImage = `url(${data.url_fondo_rojo})`;
+                    document.querySelector('.bg-red').style.backgroundSize = 'cover';
+                    document.querySelector('.bg-red').style.backgroundPosition = 'center';
+                    document.querySelector('.bg-red').style.backgroundRepeat = 'no-repeat';
+                    console.log('Fondo rojo aplicado');
+                } else {
+                    console.log("Falla el campo: url_fondo_rojo");
+                }
+                
+                // Fondo verde
+                if (data.url_fondo_verde && document.querySelector('.bg-green')) {
+                    document.querySelector('.bg-green').style.backgroundImage = `url(${data.url_fondo_verde})`;
+                    document.querySelector('.bg-green').style.backgroundSize = 'cover';
+                    document.querySelector('.bg-green').style.backgroundPosition = 'center';
+                    document.querySelector('.bg-green').style.backgroundRepeat = 'no-repeat';
+                    console.log('Fondo verde aplicado');
+                } else {
+                    console.log("Falla el campo: url_fondo_verde");
+                }
+                
+                // Fondo morado
+                if (data.url_fondo_morado && document.querySelector('.bg-purple')) {
+                    document.querySelector('.bg-purple').style.backgroundImage = `url(${data.url_fondo_morado})`;
+                    document.querySelector('.bg-purple').style.backgroundSize = 'cover';
+                    document.querySelector('.bg-purple').style.backgroundPosition = 'center';
+                    document.querySelector('.bg-purple').style.backgroundRepeat = 'no-repeat';
+                    console.log('Fondo morado aplicado');
+                } else {
+                    console.log("Falla el campo: url_fondo_morado");
+                }
+                
+                // Fondo FAQs
+                if (data.url_fondo_faqs && document.querySelector('.faq-container-general')) {
+                    document.querySelector('.faq-container-general').style.backgroundImage = `url(${data.url_fondo_faqs})`;
+                    document.querySelector('.faq-container-general').style.backgroundSize = 'cover';
+                    document.querySelector('.faq-container-general').style.backgroundPosition = 'center';
+                    document.querySelector('.faq-container-general').style.backgroundRepeat = 'no-repeat';
+                    document.querySelector('.faq-container-general').style.padding = '30px';
+                    console.log('Fondo FAQs aplicado');
+                } else {
+                    console.log("Falla el campo: url_fondo_faqs");
+                }
+                
+                // Fondo blanco para FAQs
+                if (data.url_fondo_blanco) {
+                    const faqItems = document.querySelectorAll('.faq-item-white');
+                    faqItems.forEach(item => {
+                        item.style.backgroundImage = `url(${data.url_fondo_blanco})`;
+                        item.style.backgroundSize = 'cover';
+                        item.style.backgroundPosition = 'center';
+                        item.style.backgroundRepeat = 'no-repeat';
+                        item.style.padding = '30px';
+                        item.style.margin = '0';
+                    });
+                    console.log('Fondo blanco aplicado a FAQs');
+                } else {
+                    console.log("Falla el campo: url_fondo_blanco");
+                }
+                
+                // === ACTUALIZAR ICONOS ===
+                
+                // Icono lugar
+                if (data.url_icono_lugar && document.getElementById('img-lugar')) {
+                    document.getElementById('img-lugar').src = data.url_icono_lugar;
+                    console.log('Icono lugar actualizado');
+                } else {
+                    console.log("Falla el campo: url_icono_lugar");
+                }
+                
+                // Icono teléfono usando getField
+                if (getField('url_icono_tel') && document.getElementById('img-tel')) {
+                    document.getElementById('img-tel').src = getField('url_icono_tel');
+                    console.log('Icono teléfono actualizado');
+                } else {
+                    console.log("Falla el campo: url_icono_tel");
+                }
+                
+                // Icono email de la tarjeta de contacto (blanco)
+                if (getField('url_icono_email_blanco') && document.getElementById('img-email-card')) {
+                    document.getElementById('img-email-card').src = getField('url_icono_email_blanco');
+                    console.log('Icono email tarjeta actualizado');
+                } else {
+                    console.log("Falla el campo: url_icono_email_blanco");
+                }
+                
+                // Icono email de la cabecera
+                if (getField('url_icono_email') && document.getElementById('img-email-header')) {
+                    document.getElementById('img-email-header').src = getField('url_icono_email');
+                    console.log('Icono email header actualizado');
+                } else {
+                    console.log("Falla el campo: url_icono_email");
+                }
+                
+                // Icono horario usando getField
+                if (getField('url_icono_horario') && document.getElementById('img-horario')) {
+                    document.getElementById('img-horario').src = getField('url_icono_horario');
+                    console.log('Icono horario actualizado');
+                } else {
+                    console.log("Falla el campo: url_icono_horario");
+                }
+                
+                // Icono pelota principal
+                if (data.url_icono_pelota && document.getElementById('img-pelota')) {
+                    document.getElementById('img-pelota').src = data.url_icono_pelota;
+                    console.log('Pelota principal actualizada');
+                } else {
+                    console.log("Falla el campo: url_icono_pelota (principal)");
+                }
+                
+                // Icono pelota FAQ (mismo campo)
+                if (data.url_icono_pelota && document.getElementById('img-pelota-faq')) {
+                    document.getElementById('img-pelota-faq').src = data.url_icono_pelota;
+                    console.log('Pelota FAQ actualizada');
+                } else {
+                    console.log("Falla el campo: url_icono_pelota (FAQ)");
+                }
+                
+                // Icono mail header (usando url_icono_email)
+                if (data.url_icono_email && document.getElementById('img-mail-header')) {
+                    document.getElementById('img-mail-header').src = data.url_icono_email;
+                    console.log('Icono mail header actualizado');
+                } else {
+                    console.log("Falla el campo: url_icono_email (mail header)");
+                }
+                
+                // Icono del botón enviar usando getField
+                if (getField('url_icono_enviar') && document.getElementById('img-btn-enviar')) {
+                    document.getElementById('img-btn-enviar').src = getField('url_icono_enviar');
+                    document.getElementById('img-btn-enviar').style.width = '20px';
+                    document.getElementById('img-btn-enviar').style.height = '20px';
+                    console.log('Icono botón enviar actualizado');
+                } else {
+                    console.log("Falla el campo: url_icono_enviar");
+                }
+                
+                // Fondo del botón enviar usando getField
+                if (getField('url_btn_enviar') && document.getElementById('db-btn-enviar')) {
+                    document.getElementById('db-btn-enviar').style.backgroundImage = `url(${getField('url_btn_enviar')})`;
+                    document.getElementById('db-btn-enviar').style.backgroundSize = 'cover';
+                    document.getElementById('db-btn-enviar').style.backgroundPosition = 'center';
+                    document.getElementById('db-btn-enviar').style.backgroundRepeat = 'no-repeat';
+                    document.getElementById('db-btn-enviar').style.color = 'white';
+                    console.log('Fondo botón enviar aplicado');
+                } else {
+                    console.log("Falla el campo: url_btn_enviar");
+                }
+                
+                console.log(`Iconos y fondos procesados desde Contact/${nombreDocumento}`);
+                
+                } else {
+                    const errorMsg = `No se encontró el documento "${nombreDocumento}" en la colección "Contact"`;
+                    console.error('ERROR:', errorMsg);
+                    mostrarErrorEnPantalla(errorMsg);
+                }
+            }, (error) => {
+                console.error(`Error en listener de Contact/${nombreDocumento}:`, error);
+                if (error.code === 'permission-denied') {
+                    mostrarErrorEnPantalla('Permission denied: No tienes permisos para leer la colección Contact');
+                } else if (error.code === 'not-found') {
+                    mostrarErrorEnPantalla('Collection not found: La colección Contact no existe');
+                }
+            });
         }
+
+        // Intentar primero con "Imágenes" (con tilde)
+        cargarImagenes("Imágenes");
+        
+        // Si no funciona, el usuario puede ver el error y saber que debe probar "Imagenes"
+        console.log('Si falla "Imágenes", el documento podría llamarse "Imagenes" (sin tilde)');
     }
 
     // Form submission handler with Firebase v9
@@ -330,10 +550,10 @@
         
         // Get form values
         const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            message: document.getElementById('message').value
+            name: document.getElementById('input-name').value,
+            email: document.getElementById('input-email').value,
+            phone: document.getElementById('input-phone').value,
+            message: document.getElementById('input-message').value
         };
         
         // Disable submit button and show loading
@@ -354,7 +574,7 @@
             formMessage.style.backgroundColor = '#d4edda';
             formMessage.style.color = '#155724';
             formMessage.style.border = '1px solid #c3e6cb';
-            formMessage.innerHTML = '✅ ¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.';
+            formMessage.innerHTML = '¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.';
             
             // Reset form
             document.getElementById('contactForm').reset();
@@ -369,7 +589,7 @@
             formMessage.style.backgroundColor = '#f8d7da';
             formMessage.style.color = '#721c24';
             formMessage.style.border = '1px solid #f5c6cb';
-            formMessage.innerHTML = '❌ Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.';
+            formMessage.innerHTML = 'Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.';
         } finally {
             // Re-enable submit button
             submitButton.disabled = false;

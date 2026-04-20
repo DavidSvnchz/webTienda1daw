@@ -44,6 +44,42 @@ form input, form textarea {
 .info-sidebar { display: flex; flex-direction: column; gap: 15px; }
 .info-card { padding: 22px; border-radius: 15px; display: flex; align-items: center; gap: 20px; color: white; }
 .icon-svg { width: 35px; height: 35px; fill: white; }
+
+/* Iconos de contacto - tamaño uniforme y alineación */
+#img-lugar, #img-tel, #img-email, #img-horario {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Pelotas - tamaño máximo controlado */
+#img-pelota, #img-pelota-faq {
+    max-width: 55px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Icono del botón enviar */
+#img-btn-enviar {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Icono del header */
+#img-mail-header {
+    width: 65px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Clase general para iconos */
+.icon-style {
+    vertical-align: middle;
+    margin-right: 10px;
+    height: auto;
+}
 .bg-blue { background-color: #1c64f2; }
 .bg-red { background-color: #e02424; }
 .bg-green { background-color: #057a55; }
