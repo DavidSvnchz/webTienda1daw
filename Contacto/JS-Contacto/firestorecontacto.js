@@ -11,7 +11,7 @@ async function cargarContacto() {
         const snapTextos = await getDoc(refTextos);
 
         if (!snapTextos.exists()) {
-            console.error("❌ No existe Contact/contact_texts");
+            console.error("No existe Contact/contact_texts");
             return;
         }
 
@@ -75,7 +75,7 @@ async function cargarContacto() {
         console.log("✔ Textos cargados correctamente");
 
     } catch (error) {
-        console.error("❌ Error cargando textos:", error);
+        console.error("Error cargando textos:", error);
     }
 }
 
@@ -85,7 +85,7 @@ async function cargarImagenes() {
         const snapImg = await getDoc(refImg);
 
         if (!snapImg.exists()) {
-            console.error("❌ No existe Contact/Imágenes");
+            console.error("No existe Contact/Imágenes");
             return;
         }
 
@@ -106,10 +106,10 @@ async function cargarImagenes() {
             if (el && data[campo]) el.src = data[campo];
         });
 
-        console.log("✔ Imágenes cargadas correctamente");
+        console.log("Imágenes cargadas correctamente");
 
     } catch (error) {
-        console.error("❌ Error cargando imágenes:", error);
+        console.error("Error cargando imágenes:", error);
     }
 }
 

@@ -11,7 +11,7 @@ async function cargarHeader() {
         const snapTextos = await getDoc(refTextos);
 
         if (!snapTextos.exists()) {
-            console.error("❌ No existe header/textos");
+            console.error("No existe header/textos");
             return;
         }
 
@@ -29,15 +29,15 @@ async function cargarHeader() {
         
         
         //EMOJIS
-        document.getElementById("Headeremoji_trofeo").textContent = data.Slogan;
-        document.getElementById("emoji_cesta").textContent = data.Frase_destacada;
+        document.getElementById("Headeremoji_trofeo").textContent = data.Headeremoji_trofeo;
+        document.getElementById("emoji_cesta").textContent = data.emoji_cesta;
 
      
 
-        console.log("✔ Textos cargados correctamente");
+        console.log("Textos cargados correctamente");
 
     } catch (error) {
-        console.error("❌ Error cargando textos:", error);
+        console.error("Error cargando textos:", error);
     }
 }
 cargarHeader();

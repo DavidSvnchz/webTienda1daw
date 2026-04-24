@@ -11,7 +11,7 @@ async function cargarFooter() {
         const snapTextos = await getDoc(refTextos);
 
         if (!snapTextos.exists()) {
-            console.error("❌ No existe Footer/Texto");
+            console.error("No existe Footer/Texto");
             return;
         }
 
@@ -42,10 +42,10 @@ async function cargarFooter() {
         document.getElementById("Email").textContent = data.Email;
         document.getElementById("Telefono").textContent = data.Telefono;
 
-        console.log("✔ Textos cargados correctamente");
+        console.log("Textos cargados correctamente");
 
     } catch (error) {
-        console.error("❌ Error cargando textos:", error);
+        console.error("Error cargando textos:", error);
     }
 }
 cargarFooter();
