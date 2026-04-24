@@ -19,10 +19,14 @@
   <div id="footer"></div>
 
   <script type="module" src="/webTienda1daw/SCROLLPRODUCTOS/JS/productos.js"></script>
-  <script>
+ <script>
   fetch("/webTienda1daw/HEADER/header.html")
     .then(r => r.text())
-    .then(html => document.getElementById("header").innerHTML = html);
+    .then(html => {
+      document.getElementById("header").innerHTML = html;
+
+      import("/webTienda1daw/HEADER/JS-Header/firebaseheader.js");
+    });
 </script>
 <script>
   fetch("/webTienda1daw/Footer/footer.html")
