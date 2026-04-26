@@ -44,22 +44,32 @@ async function cargarHeader() {
     }
 }
 
-// Menu toggle functionality
+// Menu toggle functionality - simplified and robust
 function initializeMenuToggle() {
-    console.log('Initializing menu toggle...');
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.querySelector('.nav-menu');
     
-    console.log('menuToggle:', menuToggle);
-    console.log('navMenu:', navMenu);
-    
     if (menuToggle && navMenu) {
-        console.log('Both elements found, adding event listeners...');
+        // Method 1: Add event listener
         menuToggle.addEventListener('click', function(e) {
-            console.log('Menu toggle clicked!');
             e.preventDefault();
+            toggleMenu();
+        });
+        
+        // Method 2: Touch events for mobile
+        menuToggle.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            toggleMenu();
+        });
+        
+        // Method 3: Global function for inline onclick
+        window.toggleMobileMenu = function() {
+            toggleMenu();
+        };
+        
+        // Toggle function
+        function toggleMenu() {
             navMenu.classList.toggle('active');
-            console.log('Menu active class:', navMenu.classList.contains('active'));
             
             // Animate hamburger menu
             const spans = menuToggle.querySelectorAll('span');
@@ -72,7 +82,7 @@ function initializeMenuToggle() {
                 spans[1].style.opacity = '1';
                 spans[2].style.transform = 'none';
             }
-        });
+        }
         
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
@@ -95,17 +105,21 @@ function initializeMenuToggle() {
                 spans[2].style.transform = 'none';
             }
         });
-    } else {
-        console.error('Menu elements not found:', { menuToggle, navMenu });
     }
 }
 
-// Fallback: Try to initialize menu toggle after DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeMenuToggle);
-} else {
-    // DOM is already ready
+// Multiple initialization attempts
+function initMenu() {
+    initializeMenuToggle();
+    // Retry after a short delay
     setTimeout(initializeMenuToggle, 100);
+    setTimeout(initializeMenuToggle, 500);
+}
+
+// Initialize immediately and also on DOM ready
+initMenu();
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMenu);
 }
 
 cargarHeader();
