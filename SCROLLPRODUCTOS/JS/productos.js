@@ -3,7 +3,7 @@
 
 
 // Importa la inicialización de Firebase
-import "/webTienda1daw/JS-Firebase/firebase-init.js";
+import "../../JS-Firebase/firebase-init.js";
 
 import {
   getFirestore,

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chiringuito de María y José</title>
     <link rel="stylesheet" href="estilosproductos/styles.css">
+    <link rel="stylesheet" href="../HEADER/EstilosHeader/header.css">
+    <link rel="stylesheet" href="../Footer/EstilosFooter/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -17,7 +19,7 @@
 
     <div class="categorias-grid">
 
-        <a href="/webTienda1daw/SCROLLPRODUCTOS/productos.html?cat=alimentacion" class="categoria">
+        <a href="../SCROLLPRODUCTOS/productos.html?cat=alimentacion" class="categoria">
             <div id="IconoCategoría1" class="icono">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
          viewBox="0 0 24 24" stroke="white" stroke-width="2" width="50">
@@ -30,7 +32,7 @@
             <span class="link">Ver productos →</span>
         </a>
 
-        <a href="/webTienda1daw/SCROLLPRODUCTOS/productos.html?cat=Panaderia"  class="categoria">
+        <a href="../SCROLLPRODUCTOS/productos.html?cat=Panaderia"  class="categoria">
            <div id="IconoCategoría2" class="icono">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
   <!-- Forma del pan -->
@@ -48,7 +50,7 @@
             <span class="link">Ver productos →</span>
         </a>
 
-        <a href="/webTienda1daw/SCROLLPRODUCTOS/productos.html?cat=Limpieza" class="categoria">
+        <a href="../SCROLLPRODUCTOS/productos.html?cat=Limpieza" class="categoria">
             <div id="IconoCategoría3" class="icono">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/>
@@ -60,7 +62,7 @@
             <span class="link">Ver productos →</span>
         </a>
 
-        <a href="/webTienda1daw/SCROLLPRODUCTOS/productos.html?cat=Higiene" class="categoria">
+        <a href="../SCROLLPRODUCTOS/productos.html?cat=Higiene" class="categoria">
             <div id="IconoCategoría4" class="icono">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21 4.318 12.682a4.5 4.5 0 010-6.364z"/>
@@ -71,7 +73,7 @@
             <span class="link">Ver productos →</span>
         </a>
 
-        <a href="/webTienda1daw/SCROLLPRODUCTOS/productos.html?cat=Bebidas" class="categoria">
+        <a href="../SCROLLPRODUCTOS/productos.html?cat=Bebidas" class="categoria">
             <div id="IconoCategoría5" class="icono">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M8 3h8l-1 9a4 4 0 01-6 0L8 3z"/>
@@ -84,7 +86,7 @@
         </a>
         
         
-        <a href="/webTienda1daw/SCROLLPRODUCTOS/productos.html?cat=Snacks" class="categoria">
+        <a href="../SCROLLPRODUCTOS/productos.html?cat=Snacks" class="categoria">
             <div id="IconoCategoría1" class="icono">
    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
   
@@ -108,7 +110,7 @@
         </a>
 
 
-        <a href="/webTienda1daw/SCROLLPRODUCTOS/productos.html?cat=Lacteos" class="categoria">
+        <a href="../SCROLLPRODUCTOS/productos.html?cat=Lacteos" class="categoria">
             <div id="IconoCategoría1" class="icono">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
          viewBox="0 0 24 24" stroke="white" stroke-width="2" width="50">
@@ -139,20 +141,21 @@
 <script type="module" src="firebase.js"></script>
 <script type="module" src="productos.js"></script>
 <script>
-  fetch("/webTienda1daw/HEADER/header.html")
+  fetch("../../HEADER/header.html")
     .then(r => r.text())
     .then(html => {
       document.getElementById("header").innerHTML = html;
 
-      import("/webTienda1daw/HEADER/JS-Header/firebaseheader.js");
+      import("../../HEADER/JS-Header/firebaseheader.js");
     });
 </script>
+
 <script>
-  fetch("/webTienda1daw/Footer/footer.html")
+  fetch("../Footer/footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
-      import("/webTienda1daw/Footer/JS-Footer/firestorefooter.js");
+      import("../Footer/JS-Footer/firestorefooter.js");
     });
 </script>
 </body>

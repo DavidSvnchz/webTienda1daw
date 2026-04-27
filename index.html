@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chiringuito de María y José</title>
-    <link rel="stylesheet" href="/webTienda1daw/HOME/estilos/styles.css">
+    <link rel="stylesheet" href="HOME/estilos/styles.css">
+    <link rel="stylesheet" href="Footer/EstilosFooter/footer.css">
 </head>
 <body>
 
@@ -115,22 +116,22 @@
 <div id="footer"></div>
 
 <script>
-  fetch("/webTienda1daw/Footer/footer.html")
+  fetch("Footer/footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
-      import("/webTienda1daw/Footer/JS-Footer/firestorefooter.js");
+      import("./Footer/JS-Footer/firestorefooter.js");
     });
 </script>
 
- <script type="module" src="/webTienda1daw/HOME/JS-Firebase/Firebase.js"></script>
+ <script type="module" src="HOME/JS-Firebase/Firebase.js"></script>
 <script>
-  fetch("/webTienda1daw/HEADER/header.html")
+  fetch("HEADER/header.html")
     .then(r => r.text())
     .then(html => {
       document.getElementById("header").innerHTML = html;
 
-      import("/webTienda1daw/HEADER/JS-Header/firebaseheader.js");
+      import("./HEADER/JS-Header/firebaseheader.js");
     });
 </script>
 

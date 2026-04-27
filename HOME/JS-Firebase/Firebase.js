@@ -1,4 +1,4 @@
-import { db } from "/webTienda1daw/JS-Firebase/firebase-init.js";
+import { db } from "../../JS-Firebase/firebase-init.js";
 import {
   collection,
   getDocs

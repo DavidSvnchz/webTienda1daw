@@ -5,8 +5,38 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
 
 
+// Función para ajustar las rutas de navegación según la profundidad del directorio
+function adjustNavigationPaths() {
+    const pathDepth = window.location.pathname.split('/').length - 2; // -2 porque elimina el dominio y el archivo vacío final
+    let basePath = '';
+    
+    // Calcular la ruta base según la profundidad
+    for (let i = 0; i < pathDepth; i++) {
+        basePath += '../';
+    }
+    
+    // Ajustar los enlaces de navegación
+    const links = {
+        'HeaderInicio': basePath + 'index.html',
+        'HeaderProductos': basePath + 'PRODUCTOS/productos.html',
+        'HeaderProductosLatinos': basePath + 'PRODUCTOSLATINOS/productoslatinos.html',
+        'HeaderContacto': basePath + 'Contacto/Contacto.html'
+    };
+    
+    // Asignar las rutas correctas
+    Object.keys(links).forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.href = links[id];
+        }
+    });
+}
+
 async function cargarHeader() {
     try {
+        // Ajustar rutas de navegación
+        adjustNavigationPaths();
+        
         const refTextos = doc(db, "header", "textos");
         const snapTextos = await getDoc(refTextos);
 
@@ -31,8 +61,6 @@ async function cargarHeader() {
         //EMOJIS
         document.getElementById("Headeremoji_trofeo").textContent = data.Headeremoji_trofeo;
         document.getElementById("emoji_cesta").textContent = data.emoji_cesta;
-
-     
 
         // Initialize menu toggle after header is loaded
         initializeMenuToggle();
